@@ -1,4 +1,4 @@
-const matrixSize = 20;
+const matrixSize = 8;
 
 const randomColor = () => {
     return "#" + Math.floor(Math.random()*16777184).toString(16);
@@ -21,11 +21,14 @@ const newStain = (x, y) => {
     let g = document.createElement("div");
     let o = document.createElement("div");
     g.classList.add("object-grid");
+    g.style.gridTemplateColumns = "repeat("+matrixSize+", 1fr)";
+    g.style.gridTemplateRows = "repeat("+matrixSize+", 1fr)";
     o.classList.add("object");
     o.classList.add("sizeAnimated");
     o.style.left = x+"px";
     o.style.top = y+"px";
     o.onclick = () => { shatterItem(o); };
+    o.ontouchstart = () => { shatterItem(o); };
     for (let i=0; i<(matrixSize*matrixSize);i++) {
         let ch = document.createElement("div");
         ch.style.background = c;
@@ -43,11 +46,13 @@ const newStain = (x, y) => {
 };
 
 window.addEventListener("load", () => {
-    document.getElementById("container").onclick = (event) => {
+    let action = (event) => {
         event = event || window.event;
         let source = event.target || event.srcElement;
         if (source.id == "container") {
-            newStain(event.pageX, event.pageY);
+          newStain(event.pageX, event.pageY);
         }
-        }; 
+    };
+    document.getElementById("container").onclick = action;
+    document.getElementById("container").ontouchstart = action;
 });
