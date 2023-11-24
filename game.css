@@ -65,3 +65,17 @@
 * {
     user-select: none;
   }
+
+#container > span {
+    position: relative;
+    color: #000;
+    display: block;
+    width: fit-content;
+    margin: -1.5rem auto;
+    top: 50%;
+    font-size: 3rem;
+    pointer-events: none;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 1s linear;
+  }
