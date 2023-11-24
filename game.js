@@ -46,6 +46,7 @@ const newStain = (x, y) => {
         o.style.height = "max(300vw, 300vh)";
         o.style.margin = "min(-150vw, -150vh) min(-150vw, -150vh)";
     }, 100);
+    return o;
 };
 
 const intro = (i = 0) => {
