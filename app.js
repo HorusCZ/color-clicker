@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
     // serice worker
     if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./worker.js?t=" + Date.now(), { scope: '/' });
+        navigator.serviceWorker.register("./worker.js?t=" + Date.now(), { scope: '/color-clicker/' });
     }
     // wake-lock
     window.appwakelock = null;
