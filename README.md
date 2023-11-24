@@ -4,3 +4,7 @@
 
 ### About
 This thing is basically an personal experiment.
+
+
+### DEMO
+https://horuscz.github.io/color-clicker/
