@@ -1,4 +1,4 @@
-const CACHE_NAME = "color-clicker-v0.alfa.3";
+const CACHE_NAME = "color-clicker-v0.alfa.231125";
 
 self.addEventListener("activate", (event) => {
     event.waitUntil(
