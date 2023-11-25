@@ -20,6 +20,7 @@ const shatterItem = (target, forced = false) => {
 };
 
 const newStain = (x, y) => {  
+    if (!x || !y) return;
     let c = randomColor();
     let g = document.createElement("div");
     let o = document.createElement("div");
