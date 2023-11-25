@@ -1,4 +1,4 @@
-const matrixSize = 8;
+const matrixSize = 6;
 const introSteps = 12;
 const state = { ready: false, clicked: false };
 
